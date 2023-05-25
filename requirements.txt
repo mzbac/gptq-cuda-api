@@ -1,0 +1,5 @@
+safetensors
+transformers
+datasets
+sentencepiece
+accelerate
