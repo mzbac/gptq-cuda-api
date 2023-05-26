@@ -13,9 +13,9 @@ import logging
 DEV = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # Update to whichever GPTQ model you want to load
-MODEL_NAME = '../text-generation-webui/models/TheBloke_WizardLM-30B-Uncensored-GPTQ'
+MODEL_NAME = './models/TheBloke/WizardLM-30B-Uncensored-GPTQ'
 # Update the model weight that you want to load for inference.
-MODEL_PATH = '../text-generation-webui/models/TheBloke_WizardLM-30B-Uncensored-GPTQ/WizardLM-30B-Uncensored-GPTQ-4bit.act-order.safetensors'
+MODEL_PATH = './models/TheBloke/WizardLM-30B-Uncensored-GPTQ/WizardLM-30B-Uncensored-GPTQ-4bit.act-order.safetensors'
 
 
 model = load_quant(MODEL_NAME, MODEL_PATH, 4, -1)
