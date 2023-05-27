@@ -10,6 +10,9 @@ from threading import Thread
 import ssl
 import logging
 
+# Setup logging
+logging.basicConfig(level=logging.INFO)
+
 DEV = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # Update to whichever GPTQ model you want to load
